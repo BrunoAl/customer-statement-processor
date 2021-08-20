@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./transaction-report.component.css"],
 })
 export class TransactionReportComponent implements OnInit {
-  @Input() generateReportClicked: any;
-  @Input() duplicateReferences: any;
-  @Input() invalidTransactionReferences: any;
+  @Input() generateReportClicked: boolean;
+  @Input() duplicateReferences: string[];
+  @Input() invalidTransactionReferences: string[];
 
   constructor() {}
 
