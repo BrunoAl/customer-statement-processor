@@ -1,0 +1,12 @@
+.report {
+  width: 40rem;
+  margin: 2.4rem 0;
+}
+
+.report__valid {
+  color: green;
+}
+
+.report__invalid {
+  color: red;
+}

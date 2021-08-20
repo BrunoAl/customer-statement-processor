@@ -1,0 +1,40 @@
+<mat-card class="report" *ngIf="generateReportClicked">
+  <h2>Report:</h2>
+  <p
+    class="report__valid"
+    *ngIf="
+      duplicateReferences.length === 0 &&
+      invalidTransactionReferences.length === 0
+    "
+  >
+    Valid Transaction
+  </p>
+
+  <div
+    *ngIf="
+      duplicateReferences.length !== 0 ||
+      invalidTransactionReferences.length !== 0
+    "
+  >
+    <p class="report__invalid">Invalid Transaction</p>
+    <div *ngIf="invalidTransactionReferences.length !== 0">
+      <p>
+        The transactions with the following reference don't have the correct End
+        Balance:
+      </p>
+      <ul>
+        <li *ngFor="let reference of invalidTransactionReferences">
+          {{ reference }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="duplicateReferences.length !== 0">
+      <p>There are transaction with duplicated Reference Number:</p>
+      <ul>
+        <li *ngFor="let reference of duplicateReferences">
+          {{ reference }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-card>
