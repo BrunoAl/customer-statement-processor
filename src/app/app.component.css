@@ -1,0 +1,25 @@
+.table__invalid-column {
+  border: 1px solid green;
+  background-color: red;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-size: 2.4rem;
+  margin: 4rem 0;
+}
+
+.mat-table {
+  margin: 2.4rem 0;
+}
+
+@media (min-width: 768px) {
+  .mat-table {
+    min-width: 100rem;
+  }
+}
