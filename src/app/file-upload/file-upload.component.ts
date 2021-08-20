@@ -41,7 +41,7 @@ function parseXML(file: Blob, onLoadCallback: (data: object[]) => void) {
           return [
             ...prev,
             {
-              // TODO: Automate this part below.
+              // TODO: Automate the code below.
               Reference: next.attributes.reference,
               ["Account Number"]: next.elements[0].elements[0].text,
               Description: next.elements[1].elements[0].text,
