@@ -1,0 +1,11 @@
+<input
+  #uploadInput
+  hidden="true"
+  type="file"
+  onclick="this.value=null"
+  (change)="uploadInputChange($event)"
+  accept=".csv,.xml"
+/>
+<button mat-flat-button color="primary" (click)="uploadInput.click()">
+  Choose transaction file (CSV or XML)
+</button>
