@@ -31,7 +31,7 @@ function parseXML(file: Blob, onLoadCallback: (data: object[]) => void) {
   const reader: FileReader = new FileReader();
   reader.readAsBinaryString(file);
   reader.onload = () => {
-    var result = xmlToJs.xml2json(<string>reader.result, {
+    const result = xmlToJs.xml2json(<string>reader.result, {
       compact: false,
       spaces: 4,
     });
